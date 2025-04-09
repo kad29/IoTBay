@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <title>Main Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 * {
   box-sizing: border-box;
 }
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,33 +14,58 @@ body {
 /*Style the header*/
 header {
   background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  font-size: 30px;
   color: white;
+}
+
+/*Style for Logo*/
+.Logo {
+  float:left;
+}
+
+.LogOut{
+  float:right;
 }
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: left;
-  width: 10%;  
+  width: 100%;  
   background: #ccc;
   padding: 10px;
 }
-</style>
 
+button{
+  width: 24.6%;
+  border: 2px;
+  border-radius: 20px;
+  padding: 15px;
+  font-size: 15px;
+}
+</style>
 <body>
 
-<!-- Link to logout page -->
-<a href="#logout" class="Log Out" style="margin-left"><b>Log out</b></a>
-<!-- Logo of the page link back to home page -->
-<header><a href="#home" class="Logo"><b>LOGO</b></a>Main Page</header>
 
+<header>
+<!-- Logo of the page link back to home page -->
+<a href="#home" class="Logo">
+  <img src= "temp.jpg" alt = "Logo" style = "width:150px;">
+</a>
+  <h1 style= "text-align: center;">Main Page </h1>
+  
+<!-- Link to logout page -->
+<a href="#logout" class="LogOut"><b>Log out</b></a>
+
+</header>
+
+<!-- Navigation -->
 <nav>
-    <ul>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Product</a></li>
-      <li><a href="#">Account</a></li>
-    </ul>
+    <button href="#"><b>About</b></button>
+    <button href="#"><b>Product</b></button>
+    <button href="#"><b>Landing Page</b></button>
+    <button href="#"><b>Account</b></button>
   </nav>
 
 </body>
