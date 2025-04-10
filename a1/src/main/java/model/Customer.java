@@ -9,7 +9,6 @@ public class Customer {
     private String email;
     private String password;
 
-
     public Customer(String firstName, String lastName, String phoneNumber, String email, String password) {
         FirstName = firstName;
         LastName = lastName;
