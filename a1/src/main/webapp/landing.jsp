@@ -68,19 +68,19 @@ background-color: #ccc;
     <div style="text-align: center;">
         <img src="temp.jpg" alt="p1" style="width:100px">
         <h1>Product 1</h1>
-        <p class="price">$10.99</p>
+        <p>$10.99</p>
         <p><button>View details</button></p>
     </div>
     <div style="text-align: center;">
         <img src="temp.jpg" alt="p2" style="width:100px">
         <h1>Product 2</h1>
-        <p class="price">$49.99</p>
+        <p>$49.99</p>
         <p><button>View details</button></p>
     </div>
         <div style="text-align: center;">
         <img src="temp.jpg" alt="p3" style="width:100px">
         <h1>Product 3</h1>
-        <p class="price">$19.99</p>
+        <p>$19.99</p>
         <p><button>View details</button></p>
     </div>
 </div>
