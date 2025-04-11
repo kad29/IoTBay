@@ -50,13 +50,13 @@ button{
 
 <header>
 <!-- Logo of the page link back to home page -->
-<a href="#home" class="Logo">
+<a href="main.jsp" class="Logo">
   <img src= "temp.jpg" alt = "Logo" style = "width:150px;">
 </a>
   <h1 style= "text-align: center;">Main Page </h1>
   
 <!-- Link to logout page -->
-<a href="#logout" class="LogOut"><b>Log out</b></a>
+<a href="logout.jsp" class="LogOut"><b>Log out</b></a>
 
 </header>
 
@@ -64,7 +64,7 @@ button{
 <nav>
     <button href="#"><b>About</b></button>
     <button href="#"><b>Product</b></button>
-    <button href="#"><b>Landing Page</b></button>
+    <button href="landing.jsp"><b>Landing Page</b></button>
     <button href="#"><b>Account</b></button>
   </nav>
 
