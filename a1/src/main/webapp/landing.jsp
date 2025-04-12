@@ -69,19 +69,19 @@ background-color: #ccc;
         <img src="temp.jpg" alt="p1" style="width:100px">
         <h1>Product 1</h1>
         <p>$10.99</p>
-        <p><button>View details</button></p>
+        <p><button>Add to cart</button></p>
     </div>
     <div style="text-align: center;">
         <img src="temp.jpg" alt="p2" style="width:100px">
         <h1>Product 2</h1>
         <p>$49.99</p>
-        <p><button>View details</button></p>
+        <p><button>Add to cart</button></p>
     </div>
         <div style="text-align: center;">
         <img src="temp.jpg" alt="p3" style="width:100px">
         <h1>Product 3</h1>
         <p>$19.99</p>
-        <p><button>View details</button></p>
+        <p><button>Add to cart</button></p>
     </div>
 </div>
 
