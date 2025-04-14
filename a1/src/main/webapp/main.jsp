@@ -51,7 +51,7 @@ button{
     String username = request.getParameter("username");
     String email = request.getParameter("email");
     String password = request.getParameter("password");
-    String submitted = request.getParameter("submitted");
+    // String submitted = request.getParameter("submitted");
   %>
 
 
@@ -75,7 +75,7 @@ button{
   <!-- Navigation -->
   <nav>
       <button href="#"><b>About</b></button>
-      <button href="#"><b>Product</b></button>
+      <button href="#"><b>Contact</b></button>
       <button href="landing.jsp"><b>Landing Page</b></button>
       <button href="#"><b>Account</b></button>
     </nav>
