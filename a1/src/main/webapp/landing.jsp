@@ -82,7 +82,6 @@ background-color: #ccc;
     <% } %>
     <% if (customer != null) { %>
         <a href="main.jsp"><button><b>Home</b></button></a>
-        <a href="logout.jsp"><button><b>Logout</b></button></a>
     <% } %>
         <a href="cart.jsp"><button><b>Cart</b></button></a>
 
