@@ -67,6 +67,10 @@ button{
   padding: 12px 20p;x;
   margin: 8px 0;
 }
+/* Style the table */
+td, th {
+  text-align: center;
+}
 </style>
 
 <body>
@@ -86,8 +90,43 @@ button{
 
   <!-- Navigation -->
 <nav>
-    <input type="text" class ="Search" placeholder="  Search..">
+    <input type="text" class ="Search" placeholder="   Search..">
     <a href="#"><button><b>Search</b></button></a>
+    <a href="#"><button style = "float: right;"><b>Create</b></button></a>
 </nav>
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Address</th>
+  </tr>
+  <tr>
+    <td>Adam</td>
+    <td>abc</td>
+    <td>abc@gmail.com</td>
+    <td>1234567890</td>
+    <td>123 Main St</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>def</td>
+    <td>def@gmail.com</td>
+    <td>0987654321</td>
+    <td>456 Elm St</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>ghi</td>
+    <td>ghi@gmail.com</td>
+    <td>5555555555</td>
+    <td>789 Oak St</td>
+  </tr>
+</table>
 </body>
+<a href="#"><button style = "float: right;"><b>Delete</b></button></a>
+<footer>
+  <p style="position: fixed; bottom: 0; text-align: center;">&copy; 2025 IoTBay. All rights reserved.</p>
+</footer>
 </html>
