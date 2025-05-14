@@ -1,3 +1,4 @@
+
 <html>
 
 <style>
@@ -78,11 +79,11 @@ nav {
 
         <form action = "payment" method = "post">
             <label for="ccnum">Credit Card Number:</label><br>
-            <input type="text" id="ccnum" name="ccnum"><br>
+            <input type="text" placeholder = "**** **** **** ****" id="ccnum" name="ccnum"><br>
             <label for="expdate">Expiry Date:</label><br>
-            <input type="text" id="expdate" name="expdate"><br>
+            <input type="text" placeholder = "**/****"id="expdate" name="expdate"><br>
             <label for="cvv">CVV:</label><br>
-            <input type="text" id="cvv" name="cvv"><br><br>
+            <input type="text" placeholder = "***" id="cvv" name="cvv"><br><br>
             <input type = "checkbox"> Remember Card Details<br><br>
             <input type="submit" value="Purchase">
 
@@ -94,12 +95,12 @@ nav {
         <h2> Debit card method </h2>
 
         <form action = "payment" method = "post">
-            <label for="ccnum">Debit Card Number:</label><br>
-            <input type="text" id="ccnum" name="ccnum"><br>
+            <label for="dcnum">Debit Card Number:</label><br>
+            <input type="text" placeholder = "**** **** **** ****" id="dcnum" name="dcnum"><br>
             <label for="expdate">Expiry Date:</label><br>
-            <input type="text" id="expdate" name="expdate"><br>
+            <input type="text" placeholder = "**/****" id="expdate" name="expdate"><br>
             <label for="cvv">CVV:</label><br>
-            <input type="text" id="cvv" name="cvv"><br><br>
+            <input type="text" placeholder = "***" id="cvv" name="cvv"><br><br>
             <input type = "checkbox"> Remember Card Details<br><br>
             <input type="submit" value="Purchase">
 
