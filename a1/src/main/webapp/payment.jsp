@@ -106,6 +106,9 @@ nav {
 
         </form>
     </div>
+    <nav>
+    <a href="cart.jsp"><button><b>Back</b></button></a>
+    </nav>
     </body>
     
 
