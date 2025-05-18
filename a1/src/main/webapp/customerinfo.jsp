@@ -84,7 +84,7 @@ td, th {
     
   <!-- Link to logout page -->
   <a href="logout.jsp" class="LogOut"><b>Log out</b></a>
-  <a href="welcome.jsp" style = "position:absolute; top:0; right:0;"><button><b>Back</b></button></a>
+  <a href="manageracc.jsp" style = "position:absolute; top:0; right:0;"><button><b>Back</b></button></a>
 
   </header>
 

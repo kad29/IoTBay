@@ -23,7 +23,6 @@
     <%-- Consider removing the password display in a real application for security reasons --%>
     <p>(Password: <%= customer.getPassword() %>)</p>
     <a href="main.jsp"><button><b>Main Page</b></button></a>
-    <a href="customerinfo.jsp"><button><b>Customer</b></button></a>
     <a href="logout.jsp"><button><b>Log Out</b></button></a>
   </body>
 </html>
