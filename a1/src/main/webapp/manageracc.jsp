@@ -40,6 +40,9 @@ header {
 
 .LogOut{
   float:right;
+  width: 150px;
+  padding: 10px;
+
 }
 /* Create two columns/boxes that floats next to each other */
 nav {
@@ -67,7 +70,7 @@ button{
     <h1 style= "text-align: center;">Hi, <%--<%= manager.getName() %>--%></h1>
     
   <!-- Link to logout page -->
-  <a href="logout.jsp" class="LogOut"><b>Log out</b></a>
+  <a href="logout.jsp" class="LogOut"><button><b>Log out</b></button></a>
     <h1 style= "text-align: center;">Manager Account</h1>
 
   </header>
