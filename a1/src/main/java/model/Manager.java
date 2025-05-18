@@ -1,13 +1,15 @@
 public class Manager {
     private String name;
-    private int mobile;
+    private String username;
+    private int phone;
     private String email;
     private String password;
 
-    public Manager(String name, int mobile, String email, String password) {
+    public Manager(String name, String username, String email, int phone, String password) {
         this.name = name;
-        this.mobile = mobile;
+        this.username = username;
         this.email = email;
+        this.phone = phone;
         this.password = password;
     }
 
@@ -20,8 +22,8 @@ public class Manager {
         this.name = name;
     }
 
-    public int getMobile() {
-        return mobile;
+    public int getPhone() {
+        return phone;
     }
 
     public String getPassword() {
@@ -29,8 +31,8 @@ public class Manager {
     }
 
 
-    public void setMobile(int mobile) {
-        this.mobile = mobile;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {
@@ -43,6 +45,12 @@ public class Manager {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
     }
     
 }

@@ -5,11 +5,13 @@ public class Customer {
     private String username;
     private String name;
     private String password;
+    private int phone;
 
-    public Customer(String name, String username, String email, String password) {
+    public Customer(String name, String username, String email, int phone, String password) {
         this.name = name;
         this.username = username;
         this.email = email;
+        this.phone = phone;
         this.password = password;
     }
     
@@ -42,6 +44,13 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
     
 }
