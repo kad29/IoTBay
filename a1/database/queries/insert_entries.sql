@@ -1,0 +1,1 @@
+insert into Manager values ('John', 'jp123', 'jp@gmail.com', '0123456789', 'password123');
