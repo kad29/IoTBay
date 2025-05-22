@@ -3,6 +3,5 @@ CREATE TABLE Manager (
     username VARCHAR(20),
     email VARCHAR(30),
     phone integer(15),
-    password VARCHAR(30),
+    password VARCHAR(30)
 );
-
