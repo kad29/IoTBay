@@ -77,7 +77,7 @@ button{
 
   <!-- Navigation -->
 <nav>
-    <a href="#"><button><b>Product Catalouge</b></button></a>  
+    <a href="#"><button><b>Product Catalouge</b></button></a>
     <a href="customerinfo.jsp"><button><b>Customer Information</b></button></a>
     <a href="add-staff.jsp"><button><b>Staff Information Management</b></button></a>
     <a href="manageracc.jsp"><button><b>Account</b></button></a>
