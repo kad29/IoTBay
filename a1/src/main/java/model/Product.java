@@ -3,11 +3,14 @@ package model;
 public class Product {
     private String productId;
     private String name;
+    private String type;
     private double price;
+
     
-    public Product(String productId, String name, double price) {
+    public Product(String productId, String name, String type, double price) {
         this.productId = productId;
         this.name = name;
+        this.type = type;
         this.price = price;
     }
     
@@ -18,6 +21,10 @@ public class Product {
     
     public String getName() {
         return name;
+    }
+
+    public String getType() {
+        return type;
     }
     
     public double getPrice() {
