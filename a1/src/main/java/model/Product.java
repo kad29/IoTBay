@@ -32,6 +32,10 @@ public class Product {
     public double getPrice() {
         return price;
     }
+
+    public int quantity() {
+        return quantity;
+    }
     
     @Override
     public boolean equals(Object obj) {

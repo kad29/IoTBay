@@ -15,9 +15,42 @@
       </text>
     </div>
 
-    <button class="add_product_button">
+    <button class="add_product_button" onclick="openForm()">
       + Add Product
     </button>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Add Product</h1>
+
+        <label for="name"><b>Product Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" required>
+
+        <label for="type"><b>Product Type</b></label>
+        <input list="suggestions" id="type" name="type" type="text" placeholder="Enter Type">
+
+        <datalist id="suggestions">
+          <option value="Phone">
+          <option value="Laptop">
+          <option value="Camera">
+          <option value="Tablet">
+          <option value="Accessories">
+        </datalist>
+
+        <label for="price">Product Price</label>
+        <div style="display: flex; align-items: center;">
+          <span style="margin-right: 5px; font-size: large;">$</span>
+          <input type="number" id="price" name="price" step="0.01" min="0" placeholder="0.00">
+        </div>
+
+        <label for="Quantity"><b>Product Quantity</b></label>
+        <input type="number" placeholder="Enter Quantity" name="quantity" required>
+
+        <button type="add" class="btn">Add</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
     <div class="title_div">
       <h1 class="title">
         Device Catalogue
@@ -36,33 +69,17 @@
         <p>Unit Price: $1500</p>
         <P>Stock: 12</P>
       </div>
-      <div class="catalogue_item_div">
-        <img src="productImages/iphone16.jpg">
-        <p>Device Name: iphone 16</p>
-        <P>Type: Phone</P>
-        <p>Unit Price: $1100</p>
-        <P>Stock: 8</P>
-      </div>
-      <div class="catalogue_item_div">
-        <img src="productImages/EOSR8.jpg">
-        <p>Device Name: EOS R8</p>
-        <P>Type: Camera</P>
-        <p>Unit Price: $2600</p>
-        <P>Stock: 4</P>
-      </div>
-      <div class="catalogue_item_div">
-        <img src="productImages/applewatchseries8.jpg">
-        <p>Device Name: Apple Watch Series 8</p>
-        <P>Type: Watch</P>
-        <p>Unit Price: $400</p>
-        <P>Stock: 16</P>
-      </div>
-      <div class="catalogue_item_div">
-        <img src="productImages/ipadmini6.jpg">
-        <p>Device Name: IPad Mini 6</p>
-        <P>Type: Tablet</P>
-        <p>Unit Price: $400</p>
-        <P>Stock: 13</P>
-      </div>
+     
+    </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
   </body>
 </html>
