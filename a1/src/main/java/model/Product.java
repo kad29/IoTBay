@@ -5,13 +5,15 @@ public class Product {
     private String name;
     private String type;
     private double price;
+    private int quantity;
 
     
-    public Product(String productId, String name, String type, double price) {
+    public Product(String productId, String name, String type, double price, int quantity) {
         this.productId = productId;
         this.name = name;
         this.type = type;
         this.price = price;
+        this.quantity = quantity;
     }
     
     // Getters and setters
