@@ -1,3 +1,5 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -20,7 +22,7 @@
     </button>
 
     <div class="form-popup" id="myForm">
-      <form action="${pageContext.request.contextPath}/AddProductServlet" method="POST" class="form-container">
+      <form action="/AddProductServlet" method="POST" class="form-container">
   Product ID: <input type="text" name="productID"><br>
   Name: <input type="text" name="name"><br>
   Type: <input type="text" name="type"><br>

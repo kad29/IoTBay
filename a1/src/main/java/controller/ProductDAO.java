@@ -11,7 +11,7 @@ import java.sql.Statement;
 
 
 public class ProductDAO {
-  private static final String DB_URL = "jdbc:sqlite:.../database/manager.db";
+  private static final String DB_URL = "jdbc:sqlite:../../../database/manager.db";
 
   
     public ProductDAO() {
