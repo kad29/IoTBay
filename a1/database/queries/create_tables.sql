@@ -1,4 +1,4 @@
-CREATE TABLE Manager (
+CREATE TABLE Customer (
     name VARCHAR(20),
     username VARCHAR(20),
     email VARCHAR(30),

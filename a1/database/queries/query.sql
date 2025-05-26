@@ -1,1 +1,1 @@
-SELECT * FROM Manager;
+SELECT * FROM Customer;

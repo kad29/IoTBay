@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>Edit Profile</title>
     <style>
         body {
             background: black;
@@ -53,37 +53,17 @@
             font-size: 14px;
         }
     </style>
-    <script>
-        function validateForm() {
-            var email = document.forms["loginForm"]["email"].value;
-            var password = document.forms["loginForm"]["password"].value;
-            
-            if (email == "") {
-                alert("Please enter your email");
-                return false;
-            }
-            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-                alert("Please enter a valid email address");
-                return false;
-            }
-            if (password == "") {
-                alert("Please enter your password");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </head>
 <body>
 <div class="container">
-    <h2>Login</h2>
-    
-    <form name="loginForm" action="LoginServlet" method="post" onsubmit="return validateForm()">
-        <input type="email" name="email" placeholder="Email (Username)" required />
-        <input type="password" name="password" placeholder="Password" required />
-        <button type="submit">Login</button>
+    <h2>Edit Profile</h2>
+    <form action="EditProfileServlet" method="post">
+        <input type="text" name="fullname" value="${user.fullname}" placeholder="Full Name" required />
+        <input type="email" name="email" value="${user.email}" placeholder="Email" required />
+        <input type="text" name="phone" value="${user.phone}" placeholder="Phone" required />
+        <button type="submit">Save</button>
     </form>
-    <a href="register.jsp">Don't have an account? Register</a>
+    <a href="profile.jsp">Back to Profile</a>
 </div>
 </body>
 </html> 
