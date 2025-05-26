@@ -20,35 +20,14 @@
     </button>
 
     <div class="form-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
-        <h1>Add Product</h1>
-
-        <label for="name"><b>Product Name</b></label>
-        <input type="text" placeholder="Enter Name" name="name" required>
-
-        <label for="type"><b>Product Type</b></label>
-        <input list="suggestions" id="type" name="type" type="text" placeholder="Enter Type">
-
-        <datalist id="suggestions">
-          <option value="Phone">
-          <option value="Laptop">
-          <option value="Camera">
-          <option value="Tablet">
-          <option value="Accessories">
-        </datalist>
-
-        <label for="price">Product Price</label>
-        <div style="display: flex; align-items: center;">
-          <span style="margin-right: 5px; font-size: large;">$</span>
-          <input type="number" id="price" name="price" step="0.01" min="0" placeholder="0.00">
-        </div>
-
-        <label for="Quantity"><b>Product Quantity</b></label>
-        <input type="number" placeholder="Enter Quantity" name="quantity" required>
-
-        <button type="add" class="btn">Add</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-      </form>
+      <form action="${pageContext.request.contextPath}/AddProductServlet" method="POST" class="form-container">
+  Product ID: <input type="text" name="productID"><br>
+  Name: <input type="text" name="name"><br>
+  Type: <input type="text" name="type"><br>
+  Price: <input type="number" step="0.01" name="price"><br>
+  Quantity: <input type="number" name="quantity"><br>
+  <input type="submit" value="Add Product">
+</form>
     </div>
 
     <div class="title_div">

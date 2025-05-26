@@ -56,9 +56,3 @@ public class ProductDAO {
     }
   }
 }
-
-public static void main(String[] args) {
-  Product product = new Product("Laptop", "Electronics", 999.99, 5);
-  ProductDAO dao = new ProductDAO();
-  dao.addProduct(product);
-}
