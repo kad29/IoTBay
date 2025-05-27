@@ -22,7 +22,8 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // to get the user's register information
-        String fullName = request.getParameter("fullName");
+        String username = request.getParameter("username");
+        String fullName = request.getParameter("fullname");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String phone = request.getParameter("phone");
@@ -31,6 +32,12 @@ public class RegisterServlet extends HttpServlet {
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/iotbay", "root", "")) {
             UserDAO userDAO = new UserDAO(conn);
+            // check if the username is already registered
+            if (userDAO.findByUsername(username) != null) {
+                request.setAttribute("error", "Username already taken.");
+                request.getRequestDispatcher("register.jsp").forward(request, response);
+                return;
+            }
             // check if the email is already registered
             if (userDAO.findByEmail(email) != null) {
                 request.setAttribute("error", "Email already registered.");
@@ -38,7 +45,7 @@ public class RegisterServlet extends HttpServlet {
                 return;
             }
             // create new user object
-            User user = new User(0, fullName, email, password, phone, role, null, null);
+            User user = new User(0, username, fullName, email, password, phone, role, null, null);
             // try to register new user
             boolean success = userDAO.registerUser(user);
             if (success) {

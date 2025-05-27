@@ -52,18 +52,24 @@
             text-decoration: none;
             font-size: 14px;
         }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .success {
+            color: greenyellow;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
     </style>
     <script>
         function validateForm() {
-            var email = document.forms["loginForm"]["email"].value;
+            var username = document.forms["loginForm"]["username"].value;
             var password = document.forms["loginForm"]["password"].value;
             
-            if (email == "") {
-                alert("Please enter your email");
-                return false;
-            }
-            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-                alert("Please enter a valid email address");
+            if (username == "") {
+                alert("Please enter your username");
                 return false;
             }
             if (password == "") {
@@ -78,8 +84,16 @@
 <div class="container">
     <h2>Login</h2>
     
+    <% if (request.getAttribute("error") != null) { %>
+        <div class="error">${error}</div>
+    <% } %>
+    
+    <% if (request.getAttribute("success") != null) { %>
+        <div class="success">${success}</div>
+    <% } %>
+    
     <form name="loginForm" action="LoginServlet" method="post" onsubmit="return validateForm()">
-        <input type="email" name="email" placeholder="Email (Username)" required />
+        <input type="text" name="username" placeholder="Username" required />
         <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Login</button>
     </form>

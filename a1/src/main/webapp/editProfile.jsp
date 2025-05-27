@@ -58,6 +58,7 @@
 <div class="container">
     <h2>Edit Profile</h2>
     <form action="EditProfileServlet" method="post">
+        <input type="text" name="username" value="${user.username}" placeholder="Username" required />
         <input type="text" name="fullname" value="${user.fullname}" placeholder="Full Name" required />
         <input type="email" name="email" value="${user.email}" placeholder="Email" required />
         <input type="text" name="phone" value="${user.phone}" placeholder="Phone" required />

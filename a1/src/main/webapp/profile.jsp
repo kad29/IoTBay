@@ -38,6 +38,16 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .success {
+            color: greenyellow;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
         .button-group {
             margin-top: 20px;
             display: flex;
@@ -51,15 +61,15 @@
             font-weight: bold;
         }
         .update-btn {
-            background-color: #4CAF50;
+            background-color: green;
             color: white;
         }
         .cancel-btn {
-            background-color: #f44336;
+            background-color: red;
             color: white;
         }
         .back-btn {
-            background-color: #2196F3;
+            background-color: skyblue;
             color: white;
         }
         button:hover {
@@ -80,7 +90,7 @@
                 alert("Please enter your email");
                 return false;
             }
-            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            if (!email.match(/^[^\s@]+@[^-\s@]+\.[^\s@]+$/)) {
                 alert("Please enter a valid email address");
                 return false;
             }
@@ -104,7 +114,20 @@
     <div class="container">
         <h1>User Profile</h1>
         
+        <% if (request.getAttribute("message") != null) { %>
+            <div class="success">${message}</div>
+        <% } %>
+        
+        <% if (request.getAttribute("error") != null) { %>
+            <div class="error">${error}</div>
+        <% } %>
+        
         <form name="profileForm" action="ProfileServlet" method="post" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="${user.username}" required>
+            </div>
+            
             <div class="form-group">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" value="${user.fullName}" required>
