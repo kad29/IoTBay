@@ -70,7 +70,7 @@ td, th {
 <body>
   <header>
   <!-- Logo of the page link back to home page -->
-  <a href="customerinfo.jsp" class="Logo">
+  <a href="customerinfo" class="Logo">
     <img src= "temp.jpg" alt = "Logo" style = "width:150px;">
   </a>
     <h1 style= "text-align: center;">Customer Information</h1>
