@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <%@page import="model.Customer"%>
+<%-- <%@page import="model.Customerinfo"%> --%>
+<%@ page import="java.util.List"%>
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
-<%
-    // Retrieve the Customer object from the session
-    Customer customer = (Customer) session.getAttribute("customer");
-    // Check if the customer object exists in the session
-    if (customer == null) {
-        // If not, redirect the user to the login or registration page
-        response.sendRedirect("register.jsp"); // Or your login page
-        return; // Stop further processing of this page
-    }
-%>
+
 <title>Customer Info</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -80,7 +74,7 @@ td, th {
     <img src= "temp.jpg" alt = "Logo" style = "width:150px;">
   </a>
     <h1 style= "text-align: center;">Customer Information</h1>
-    <h3 style= "text-align: center;">Hi, <%= customer.getName() %></h3>
+    <%-- <h3 style= "text-align: center;">Hi, <%= Manager.getName() %></h3> --%>
     
   <!-- Link to logout page -->
   <a href="logout.jsp" class="LogOut"><b>Log out</b></a>
@@ -94,36 +88,40 @@ td, th {
     <a href="#"><button><b>Search</b></button></a>
     <a href="#"><button style = "float: right;"><b>Create</b></button></a>
 </nav>
+
+<%
+    List<Customer> customers = (List<Customer>) request.getAttribute("customers");
+    if (customers == null || customers.isEmpty()) {
+%>
+    <h2>No customers fnd.</h2>
+<%
+    } else {
+%>
 <table style="width:100%">
   <tr>
     <th>Name</th>
     <th>Username</th>
     <th>Email</th>
     <th>Phone</th>
-    <th>Address</th>
   </tr>
+  <%
+    for (Customer customer : customers) {
+  %>
   <tr>
-    <td>Adam</td>
-    <td>abc</td>
-    <td>abc@gmail.com</td>
-    <td>1234567890</td>
-    <td>123 Main St</td>
+    <td><%= customer.getName() %></td>
+    <td><%= customer.getUsername() %></td>
+    <td><%= customer.getEmail() %></td>
+    <%-- <td><%= customer.getPhone() %></td> --%>
   </tr>
-  <tr>
-    <td>John</td>
-    <td>def</td>
-    <td>def@gmail.com</td>
-    <td>0987654321</td>
-    <td>456 Elm St</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>ghi</td>
-    <td>ghi@gmail.com</td>
-    <td>5555555555</td>
-    <td>789 Oak St</td>
-  </tr>
+  <%
+    }
+  %>
 </table>
+<%
+    }
+%>
+
+
 </body>
 <a href="#"><button style = "float: right;"><b>Delete</b></button></a>
 <footer>

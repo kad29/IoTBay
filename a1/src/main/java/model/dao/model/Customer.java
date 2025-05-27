@@ -46,7 +46,7 @@ public class Customer {
         this.password = password;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
     public void setPhone(int phone) {
