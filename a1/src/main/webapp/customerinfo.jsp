@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@page import="model.Customer"%>
-<%-- <%@page import="model.Customerinfo"%> --%>
+<%-- <%@page import="model.Customerinfo"%> for buttons later on--%>
 <%@ page import="java.util.List"%>
 <%@page contentType="text/html;charset=UTF-8" language="java" %>
 

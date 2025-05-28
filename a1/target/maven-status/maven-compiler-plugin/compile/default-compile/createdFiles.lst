@@ -13,6 +13,7 @@ model\User.class
 controller\CustomerInfoServlet.class
 controller\LoginServlet.class
 controller\AccessLogFilter.class
+controller\ConnServlet.class
 model\dao\DB.class
 controller\AddToCartServlet.class
 controller\ViewAccessLogsServlet.class

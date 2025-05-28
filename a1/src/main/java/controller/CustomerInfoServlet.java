@@ -11,7 +11,7 @@ import model.Customer;
 import model.dao.DBConnector;
 import model.dao.DBManager;
 
-@WebServlet("/customerinfo")
+@WebServlet("/CustomerInfoServlet")
 public class CustomerInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
