@@ -1,1 +1,3 @@
-DROP TABLE Manager;
+DROP TABLE Customer;
+
+DROP TABLE Payments;
