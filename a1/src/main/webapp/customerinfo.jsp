@@ -70,7 +70,7 @@ td, th {
 <body>
   <header>
   <!-- Logo of the page link back to home page -->
-  <a href="customerinfo" class="Logo">
+  <a href="CustomerInfoServlet" class="Logo">
     <img src= "temp.jpg" alt = "Logo" style = "width:150px;">
   </a>
     <h1 style= "text-align: center;">Customer Information</h1>
@@ -120,6 +120,7 @@ td, th {
 <%
     }
 %>
+<a action="CustomerInfoServlet"><button style = "float: right;"><b>Show</b></button></a>
 
 
 </body>

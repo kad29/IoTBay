@@ -31,7 +31,7 @@ public class RegisterServlet extends HttpServlet {
         // set the user role, default as customer
         String role = request.getParameter("role") != null ? request.getParameter("role") : "customer";
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/iotbay", "root", "")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:database/manager.db")) {
             UserDAO userDAO = new UserDAO(conn);
             // check if the username is already registered
             if (userDAO.findByUsername(username) != null) {

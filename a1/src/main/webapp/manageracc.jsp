@@ -2,7 +2,7 @@
 <%@page import="model.Manager"%>
 
 <html>
-<%
+<%-- <%
     // Retrieve the Manager object from the session
     Manager manager = (Manager) session.getAttribute("manager");
     // Check if the manager object exists in the session
@@ -11,7 +11,11 @@
         response.sendRedirect("login.jsp");
         return; // Stop further processing of this page
     }
-%>
+%> 
+
+
+wait for login to be finish--%>
+
 
 <% else if (manager.getUsername() == 'jp123' && manager.getPassword() == '1234') { %>
   <title>Manager Account</title>
