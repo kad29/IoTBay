@@ -62,7 +62,7 @@ public class Payment {
         this.expiryDate = expiryDate;
     }
 
-    public int getCvv() {
+    public String getCvv() {
         return cvv;
     }
 
