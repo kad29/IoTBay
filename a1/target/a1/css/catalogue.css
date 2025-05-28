@@ -1,0 +1,162 @@
+
+body{
+    background-color: gray;
+    margin: 0;
+  }
+
+  p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .main{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 10px;
+  }
+
+  .title_div{
+    text-align: center;
+  }
+
+  .title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .user_icon{
+    padding-bottom: none;
+  }
+
+  .user{
+    position: absolute;
+    left: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: x-large;
+    max-width: 100px;
+  }
+
+  .add_product_button{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+  }
+
+  .add_product_button:hover{
+    background-color: rgb(212, 212, 212);
+    }
+
+  .search_div{
+    text-align: center;
+    position: relative;
+    padding-bottom:20px ;
+  }
+
+  .search_bar{
+  border-radius: 30px;
+  width: 500px;
+  height: 50px;
+  border: none;
+  padding-left: 20px;
+  }
+
+  .search_icon{
+    position: absolute;
+    top: 0px;
+    left: 1165px;
+  }
+
+  .outer_catalogue_div{
+    background-color: rgb(75, 74, 74);
+    padding: 50px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .catalogue_item_div{
+    width: 80%;
+    outline: black;
+    text-align: center;
+    background-color: grey;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+
+  .hi{
+    background-color: white;
+  }
+
+  img{
+    padding-top: 10px;
+    max-width: 200px;
+    max-height: 100px;
+  }
+
+  /* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 500px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text]{
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+  .form-container input[type=number]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus{
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }

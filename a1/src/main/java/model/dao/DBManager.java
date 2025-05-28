@@ -28,7 +28,7 @@ public class DBManager {
             String name = rs.getString("name");
             String username = rs.getString("username");
             String email = rs.getString("email");
-            int phone = rs.getInt("phone");
+            String phone = rs.getString("phone");
             String password = rs.getString("password");
             customers.add(new Customer(name, username, email, phone, password));
         }
@@ -36,7 +36,7 @@ public class DBManager {
     }
 
     // Find customer by username and password in the database
-    public User findCustomer(String username, String password) throws SQLException {
+    public Customer findCustomer(String username, String password) throws SQLException {
         // setup the select sql query string
         String query = "SELECT * FROM Customer WHERE username = '" + username + "' AND password = '" + password + "'";
 

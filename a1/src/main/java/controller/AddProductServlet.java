@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.Product;
+import java.io.PrintWriter;
 
 @WebServlet("/AddProductServlet")
 public class AddProductServlet extends HttpServlet {

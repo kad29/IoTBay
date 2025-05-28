@@ -8,10 +8,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.Customer;
-import model.Customerinfo;
+//import model.CustomerInfo;
 
 public class AddCustomer {
-
+/* 
 @WebServlet("/AddCustomerServlet")
 public class AddCustomerServlet extends HttpServlet {
     
@@ -32,7 +32,7 @@ public class AddCustomerServlet extends HttpServlet {
         String name = request.getParameter("name");
         String username = request.getParameter("username");
         String email = request.getParameter("email");
-        int phone = Integer.parseInt(request.getParameter("phone"));
+        String phone = request.getParameter("phone");
         String password = request.getParameter("password");
         
         // Create a new customer and add it to customer info
@@ -42,5 +42,6 @@ public class AddCustomerServlet extends HttpServlet {
         response.sendRedirect("customerinfo.jsp");
     }
 }
+*/
 
 }
