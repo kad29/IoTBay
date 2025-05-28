@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -49,6 +50,23 @@ public class RegisterServlet extends HttpServlet {
             // try to register new user
             boolean success = userDAO.registerUser(user);
             if (success) {
+                // register successfully, also insert into Customer table
+                try {
+                    model.dao.DBConnector connector = new model.dao.DBConnector();
+                    java.sql.Connection derbyConn = connector.openConnection();
+                    String sql = "INSERT INTO Customer (name, username, email, phone, password) VALUES (?, ?, ?, ?, ?)";
+                    try (PreparedStatement ps = derbyConn.prepareStatement(sql)) {
+                        ps.setString(1, fullName);
+                        ps.setString(2, username);
+                        ps.setString(3, email);
+                        ps.setInt(4, Integer.parseInt(phone));
+                        ps.setString(5, password);
+                        ps.executeUpdate();
+                    }
+                    connector.closeConnection();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 // register successfully, redirect to login page
                 response.sendRedirect("login.jsp");
             } else {

@@ -62,6 +62,23 @@
             margin-bottom: 10px;
             font-size: 14px;
         }
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .toggle-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: green;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .toggle-button.active {
+            background: blue;
+        }
     </style>
     <script>
         function validateForm() {
@@ -78,6 +95,20 @@
             }
             return true;
         }
+
+        function toggleUserType() {
+            const button = document.getElementById('userTypeToggle');
+            const userType = document.getElementById('userType');
+            if (button.textContent === 'Customer Login') {
+                button.textContent = 'Manager Login';
+                button.classList.add('active');
+                userType.value = 'manager';
+            } else {
+                button.textContent = 'Customer Login';
+                button.classList.remove('active');
+                userType.value = 'customer';
+            }
+        }
     </script>
 </head>
 <body>
@@ -92,7 +123,12 @@
         <div class="success">${success}</div>
     <% } %>
     
+    <div class="toggle-container">
+        <button type="button" id="userTypeToggle" class="toggle-button" onclick="toggleUserType()">Customer Login</button>
+    </div>
+    
     <form name="loginForm" action="LoginServlet" method="post" onsubmit="return validateForm()">
+        <input type="hidden" id="userType" name="userType" value="customer" />
         <input type="text" name="username" placeholder="Username" required />
         <input type="password" name="password" placeholder="Password" required />
         <button type="submit">Login</button>

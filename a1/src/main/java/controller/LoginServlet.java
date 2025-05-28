@@ -24,11 +24,57 @@ public class LoginServlet extends HttpServlet {
         // to get the user's login information
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        String userType = request.getParameter("userType");
 
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/iotbay", "root", "")) {
             // create user data access object and verify the login
             UserDAO userDAO = new UserDAO(conn);
-            User user = userDAO.login(username, password);
+            User user = null;
+            
+            if ("customer".equals(userType)) {
+                // Try to login as customer
+                String customerSql = "SELECT * FROM Customer WHERE username = ? AND password = ?";
+                try (PreparedStatement stmt = conn.prepareStatement(customerSql)) {
+                    stmt.setString(1, username);
+                    stmt.setString(2, password);
+                    ResultSet rs = stmt.executeQuery();
+                    if (rs.next()) {
+                        user = new User(
+                            0,
+                            rs.getString("username"),
+                            rs.getString("name"),
+                            rs.getString("email"),
+                            rs.getString("password"),
+                            String.valueOf(rs.getInt("phone")),
+                            "customer",
+                            null,
+                            null
+                        );
+                    }
+                }
+            } else {
+                // Try to login as manager
+                String managerSql = "SELECT * FROM Manager WHERE username = ? AND password = ?";
+                try (PreparedStatement stmt = conn.prepareStatement(managerSql)) {
+                    stmt.setString(1, username);
+                    stmt.setString(2, password);
+                    ResultSet rs = stmt.executeQuery();
+                    if (rs.next()) {
+                        user = new User(
+                            0,
+                            rs.getString("username"),
+                            rs.getString("name"),
+                            rs.getString("email"),
+                            rs.getString("password"),
+                            String.valueOf(rs.getInt("phone")),
+                            "manager",
+                            null,
+                            null
+                        );
+                    }
+                }
+            }
+
             if (user != null) {
                 // login successfully, record the login time
                 String logSql = "INSERT INTO access_log (user_id, login_time) VALUES (?, ?)";
@@ -41,8 +87,13 @@ public class LoginServlet extends HttpServlet {
                 // create user session and store user information
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
-                // after login successfully, redirect to main page
-                response.sendRedirect("main.jsp"); 
+                
+                // Redirect based on user type
+                if ("customer".equals(userType)) {
+                    response.sendRedirect("main.jsp"); // Shopping page for customers
+                } else {
+                    response.sendRedirect("admin.jsp"); // Admin page for managers
+                }
             } else {
                 // login failed, show error message
                 request.setAttribute("error", "Invalid username or password.");
