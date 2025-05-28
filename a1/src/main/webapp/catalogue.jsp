@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="user">
+    <%-- Button leading back to landing page --%>
         <a href="landing.jsp" class="main"><b>Main Page</b></a>
       <text class="user_icon">&#128100;</text>
       <text>
@@ -17,19 +18,21 @@
       </text>
     </div>
 
+    
+      <%-- Button to show add product popup form --%>
     <button class="add_product_button" onclick="openForm()">
       + Add Product
     </button>
-
+      <%-- popup form used to add product --%>
     <div class="form-popup" id="myForm">
       <form action="/AddProductServlet" method="POST" class="form-container">
-  Product ID: <input type="text" name="productID"><br>
-  Name: <input type="text" name="name"><br>
-  Type: <input type="text" name="type"><br>
-  Price: <input type="number" step="0.01" name="price"><br>
-  Quantity: <input type="number" name="quantity"><br>
-  <input type="submit" value="Add Product">
-</form>
+        Product ID: <input type="text" name="productID"><br>
+        Name: <input type="text" name="name"><br>
+        Type: <input type="text" name="type"><br>
+        Price: <input type="number" step="0.01" name="price"><br>
+        Quantity: <input type="number" name="quantity"><br>
+        <input type="submit" value="Add Product">
+      </form>
     </div>
 
     <div class="title_div">
@@ -81,6 +84,7 @@
     </div>
 
     <script>
+    // Javascript used to show and hide popup form
       function openForm() {
         document.getElementById("myForm").style.display = "block";
       }
