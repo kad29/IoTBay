@@ -50,7 +50,34 @@
         <p>Unit Price: $1500</p>
         <P>Stock: 12</P>
       </div>
-     
+      <div class="catalogue_item_div">
+        <img src="productImages/iphone16.jpg">
+        <p>Device Name: iphone 16</p>
+        <P>Type: Phone</P>
+        <p>Unit Price: $1100</p>
+        <P>Stock: 8</P>
+      </div>
+      <div class="catalogue_item_div">
+        <img src="productImages/EOSR8.jpg">
+        <p>Device Name: EOS R8</p>
+        <P>Type: Camera</P>
+        <p>Unit Price: $2600</p>
+        <P>Stock: 4</P>
+      </div>
+      <div class="catalogue_item_div">
+        <img src="productImages/applewatchseries8.jpg">
+        <p>Device Name: Apple Watch Series 8</p>
+        <P>Type: Watch</P>
+        <p>Unit Price: $400</p>
+        <P>Stock: 16</P>
+      </div>
+      <div class="catalogue_item_div">
+        <img src="productImages/ipadmini6.jpg">
+        <p>Device Name: IPad Mini 6</p>
+        <P>Type: Tablet</P>
+        <p>Unit Price: $400</p>
+        <P>Stock: 13</P>
+      </div>
     </div>
 
     <script>
