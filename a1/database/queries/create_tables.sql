@@ -8,6 +8,26 @@ CREATE TABLE Product (
     quantity int(10),
 );
 
+CREATE TABLE Customer (
+    name VARCHAR(255),
+    username VARCHAR(15),
+    email VARCHAR(255) PRIMARY KEY,
+    phoneNumber VARCHAR(15),
+    password VARCHAR(255)
+);
+
+
+
+CREATE TABLE Orders(
+    orderID INTEGER PRIMARY KEY AUTOINCREMENT,
+    email VARCHAR(255),
+    orderDate DATE,
+    totalAmount DECIMAL(10,2),
+    FOREIGN KEY (email) REFERENCES Customer(email)
+);
+
+
+
 CREATE TABLE Payments (
     payment_id INTEGER AUTO_INCREMENT,
     order_id INTEGER,

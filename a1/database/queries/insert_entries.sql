@@ -40,7 +40,31 @@ INSERT INTO Orders (email, orderDate, totalAmount) VALUES
     ('jack.young@email.com', '2025-02-28', 110.00),
     ('mia.adams@email.com', '2025-03-02', 250.00),
     ('noah.evans@email.com', '2025-03-05', 135.00);
-    
+
+
+INSERT INTO Product (productID, productName, productType, price, quantity) VALUES
+(1, 'iPhone 15', 'Smartphone', 1299.00, 30),
+(2, 'Galaxy S24', 'Smartphone', 1199.00, 25),
+(3, 'iPad Pro', 'Tablet', 1599.00, 20),
+(4, 'Galaxy Tab S9', 'Tablet', 1099.00, 18),
+(5, 'MacBook Air', 'Laptop', 1699.00, 15),
+(6, 'Dell XPS 13', 'Laptop', 1499.00, 12),
+(7, 'Apple Watch 9', 'Smartwatch', 699.00, 22),
+(8, 'Galaxy Watch 6', 'Smartwatch', 599.00, 20),
+(9, 'Sony WH-1000XM5', 'Headphones', 499.00, 35),
+(10, 'Bose QC45', 'Headphones', 449.00, 30),
+(11, 'Canon EOS R10', 'Camera', 1399.00, 10),
+(12, 'GoPro Hero 12', 'Camera', 599.00, 18),
+(13, 'Nintendo Switch', 'Console', 469.00, 25),
+(14, 'Xbox Series S', 'Console', 399.00, 20),
+(15, 'Kindle Paperwhite', 'E-Reader', 229.00, 40),
+(16, 'Apple TV 4K', 'Streaming', 249.00, 28),
+(17, 'Google Nest Hub', 'Smart Home', 149.00, 32),
+(18, 'TP-Link Router', 'Networking', 129.00, 27),
+(19, 'Logitech MX Master 3', 'Accessory', 149.00, 50),
+(20, 'Anker Power Bank', 'Accessory', 79.00, 60);
+
+
 insert into Payments 
 values 
 (1, 1, 'Credit Card', '1234567890123456', '12/25', '123', 100),
