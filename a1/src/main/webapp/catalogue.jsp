@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="user">
-        <a href="main.jsp" class="main"><b>Main Page</b></a>
+        <a href="landing.jsp" class="main"><b>Main Page</b></a>
       <text class="user_icon">&#128100;</text>
       <text>
         Staff
