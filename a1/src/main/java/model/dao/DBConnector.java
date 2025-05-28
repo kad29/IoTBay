@@ -13,9 +13,9 @@ public class DBConnector extends DB{
 
 public DBConnector() throws ClassNotFoundException, SQLException {
 
-Class.forName(driver);
+    Class.forName(driver);
 
-conn = DriverManager.getConnection(URL+db, dbuser, dbpass);
+    conn = DriverManager.getConnection(URL);
 
 }
 
@@ -23,7 +23,7 @@ conn = DriverManager.getConnection(URL+db, dbuser, dbpass);
 
 public Connection openConnection(){
 
-return this.conn;
+    return this.conn;
 
 }
 
@@ -31,7 +31,7 @@ return this.conn;
 
 public void closeConnection() throws SQLException {
 
-this.conn.close();
+    this.conn.close();
 
 }
 
