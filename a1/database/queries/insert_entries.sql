@@ -1,5 +1,46 @@
-insert into Customer values ('ABC', '123', 'abc@gmail.com', '0123456789', 'password123');
+INSERT INTO Customer (name, username, email, phoneNumber, password) VALUES
+    ('John Doe', 'jdoe', 'john.doe@email.com', '0412345678', 'pass1234'),
+    ('Mary Smith', 'msmith', 'mary.smith@email.com', '0423456789', 'marypass'),
+    ('Peter Jones', 'pjones', 'peter.jones@email.com', '0434567890', 'peterpw'),
+    ('Sarah Wilson', 'swilson', 'sarah.wilson@email.com', '0445678901', 'sarahpw'),
+    ('Mike Brown', 'mbrown', 'mike.brown@email.com', '0456789012', 'mikepw'),
+    ('Lisa Taylor', 'ltaylor', 'lisa.taylor@email.com', '0467890123', 'lisapw'),
+    ('David Clark', 'dclark', 'david.clark@email.com', '0478901234', 'davidpw'),
+    ('Emma White', 'ewhite', 'emma.white@email.com', '0489012345', 'emmapw'),
+    ('Chris Martin', 'cmartin', 'chris.martin@email.com', '0490123456', 'chrispw'),
+    ('Anna Lee', 'alee', 'anna.lee@email.com', '0401234567', 'annapw'),
+    ('Tom Wilson', 'twilson', 'tom.wilson@email.com', '0411122233', 'tompw'),
+    ('Jane Miller', 'jmiller', 'jane.miller@email.com', '0422233344', 'janepw'),
+    ('Sam Green', 'sgreen', 'sam.green@email.com', '0433344455', 'sampw'),
+    ('Olivia Hall', 'ohall', 'olivia.hall@email.com', '0444455566', 'oliviapw'),
+    ('Ben King', 'bking', 'ben.king@email.com', '0455566677', 'benpw'),
+    ('Lucy Scott', 'lscott', 'lucy.scott@email.com', '0466677788', 'lucypw'),
+    ('Jack Young', 'jyoung', 'jack.young@email.com', '0477788899', 'jackpw'),
+    ('Mia Adams', 'madams', 'mia.adams@email.com', '0488899900', 'miapw'),
+    ('Noah Evans', 'nevans', 'noah.evans@email.com', '0499900112', 'noahpw');
 
+INSERT INTO Orders (email, orderDate, totalAmount) VALUES
+    ('abc@gmail.com', '2025-01-10', 120.50),
+    ('john.doe@email.com', '2025-01-12', 89.99),
+    ('mary.smith@email.com', '2025-01-15', 150.00),
+    ('peter.jones@email.com', '2025-01-18', 200.00),
+    ('sarah.wilson@email.com', '2025-01-20', 75.25),
+    ('mike.brown@email.com', '2025-01-22', 300.00),
+    ('lisa.taylor@email.com', '2025-01-25', 50.00),
+    ('david.clark@email.com', '2025-01-28', 180.75),
+    ('emma.white@email.com', '2025-02-01', 220.00),
+    ('chris.martin@email.com', '2025-02-05', 99.99),
+    ('anna.lee@email.com', '2025-02-08', 130.00),
+    ('tom.wilson@email.com', '2025-02-12', 175.50),
+    ('jane.miller@email.com', '2025-02-15', 210.00),
+    ('sam.green@email.com', '2025-02-18', 80.00),
+    ('olivia.hall@email.com', '2025-02-20', 145.00),
+    ('ben.king@email.com', '2025-02-22', 160.00),
+    ('lucy.scott@email.com', '2025-02-25', 95.00),
+    ('jack.young@email.com', '2025-02-28', 110.00),
+    ('mia.adams@email.com', '2025-03-02', 250.00),
+    ('noah.evans@email.com', '2025-03-05', 135.00);
+    
 insert into Payments 
 values 
 (1, 1, 'Credit Card', '1234567890123456', '12/25', '123', 100),
